@@ -24,7 +24,7 @@ const Firemap = ({ markers = [] }) => {
             "bottom-right": [-12, -38],
           }}
         >
-          <h1>Fire</h1>
+          <h1>{marker.name}</h1>
         </Marker>
       ))}
     </Map>
