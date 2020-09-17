@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Drawer from "@material-ui/core/Drawer";
 import Typography from "@material-ui/core/Typography";
 import { openWeatherToken } from "../../mapbox-config";
+import d2d from "degrees-to-direction";
+
 const DetailPanel = ({
   id,
   name,
@@ -21,7 +23,7 @@ const DetailPanel = ({
   console.log(weather);
   useEffect(() => {
     fetch(
-      `https://openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${openWeatherToken}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&APPID=${openWeatherToken}&units=Imperial`
     )
       .then((res) => res.json())
       .then((data) => setWeather(data))
@@ -34,6 +36,9 @@ const DetailPanel = ({
         <Typography variant="h2">{name}</Typography>
         <Typography>{updated}</Typography>
         <Typography>{size}</Typography>
+        <Typography>
+          {weather?.wind?.speed} m/hr {d2d(weather?.wind?.deg)}
+        </Typography>
         <Typography>{contained}% contained</Typography>
         <div styled={{ display: "flex", gap: "1em" }}>
           <Typography>{summary}</Typography>
