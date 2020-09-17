@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import DetailPanel from "./detail.panel";
 import Map from "./map";
+import TextField from "@material-ui/core/TextField";
 
 const Firemap = () => {
   const [markers, setMarkers] = useState([]);
   const [selected, setSelected] = useState(null);
+  const [last, setLast] = useState(null);
+  const [location, setLocation] = useState("OREGON");
 
   useEffect(() => {
     var myHeaders = new Headers();
@@ -32,12 +35,23 @@ const Firemap = () => {
 
   return (
     <div>
+      {/* <TextField
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+      /> */}
       <Map
         onClickMarker={(marker) => setSelected(marker)}
-        markers={markers}
+        markers={markers.filter((itm) => itm.state === location)}
         selected={selected}
+        last={last}
       />
-      <DetailPanel {...selected} onClose={() => setSelected(null)} />
+      <DetailPanel
+        {...selected}
+        onClose={() => {
+          setLast(selected);
+          setSelected(null);
+        }}
+      />
     </div>
   );
 };
