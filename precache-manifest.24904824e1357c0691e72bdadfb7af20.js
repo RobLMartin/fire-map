@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5118a2ef0ca74643e78b1d1044a755a9",
+    "revision": "26f4ce5db97696658b901cf23246854f",
     "url": "/fire-map/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fire-map/static/css/2.0a5b19c0.chunk.css"
   },
   {
-    "revision": "6db3cabd83f8ebc72881",
+    "revision": "13257fd2c2c11d4227d3",
     "url": "/fire-map/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fire-map/static/js/2.4b6bd08c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6db3cabd83f8ebc72881",
-    "url": "/fire-map/static/js/main.c2d37d5a.chunk.js"
+    "revision": "13257fd2c2c11d4227d3",
+    "url": "/fire-map/static/js/main.19c3e895.chunk.js"
   },
   {
     "revision": "a43dbe0a73b4665413a2",
