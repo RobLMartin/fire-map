@@ -35,10 +35,6 @@ const Firemap = () => {
 
   return (
     <div>
-      {/* <TextField
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-      /> */}
       <Map
         onClickMarker={(marker) => setSelected(marker)}
         markers={markers.filter((itm) => itm.state === location)}
