@@ -19,6 +19,7 @@ export default Marker;
 const Title = styled.h2`
   color: white;
   align-items: center;
+  cursor: pointer;
 `;
 
 const YellowWarning = styled(Warning)`
