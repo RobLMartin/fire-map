@@ -15,6 +15,7 @@ const Map = ({ markers, onClickMarker, selected, last }) => {
         height: "100vh",
         width: "100vw",
       }}
+      zoom={[7]}
       center={[
         selected?.lng || last?.lng || "-122.676483",
         selected?.lat || last?.lat || "45.5051",

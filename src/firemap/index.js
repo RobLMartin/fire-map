@@ -37,7 +37,7 @@ const Firemap = () => {
     <div>
       <Map
         onClickMarker={(marker) => setSelected(marker)}
-        markers={markers.filter((itm) => itm.state === location)}
+        markers={markers}
         selected={selected}
         last={last}
       />
